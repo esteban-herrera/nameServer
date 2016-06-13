@@ -3,12 +3,12 @@
 require 'sinatra'
 
 puts ARGV[0]
-set :port, ARGV[0]
+set :bind, '0.0.0.0'
 get '/hi' do
 	"Hello World!"
 end
 
-lines = IO.readlines("names.txt")
+lines = IO.readlines("/root/names.txt")
 get '/name' do
 	puts "Got something"
 	lineNumber = rand(4000)
