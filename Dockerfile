@@ -7,5 +7,5 @@ COPY ./Gemfile* /root
 RUN cd /root && bundle install
 EXPOSE 4567
 
-CMD ["ruby", "/root/server.rb"]
+CMD ["ruby", "-d", "/root/server.rb"]
 
